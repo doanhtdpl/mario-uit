@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ResourceManager">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="GameStateManager">
+      <UniqueIdentifier>{9eea517f-f46a-4325-89bc-0cd70358f89f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState">
+      <UniqueIdentifier>{6f127746-f940-4a7f-9a5a-f9f01dc91c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FPS">
+      <UniqueIdentifier>{9d149919-af49-4887-a406-0a986f6282bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameApps">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{b76e34a6-c75b-49e5-ab01-c32575a3ff35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{74a3f49a-5e62-42b6-ae42-30e7898e405a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{aa66dbd9-ce03-494b-b3b7-06ceecdee623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite">
+      <UniqueIdentifier>{18c9d302-d415-4763-883d-479c940b57da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{b0eb5db4-00c3-4f0d-977e-b80ac59c1243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Texture">
+      <UniqueIdentifier>{83d4300a-0e13-486f-b18d-7b21df464c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{054c824a-218f-4af8-9a61-7487b72f326c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{296855ef-eb07-4653-a2d4-ea29d4f7fefc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameState\SubState">
+      <UniqueIdentifier>{6ad0996b-c983-4f44-b330-17e8a24a676f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CollisionDefected">
+      <UniqueIdentifier>{52a06a60-ce10-48fa-bc2b-d63f40e99532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Graphic">
+      <UniqueIdentifier>{d98b0768-a5cf-4f22-b68e-99c1e0339a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyActor">
+      <UniqueIdentifier>{617b2167-e1a2-4bdd-a5bf-266fc167e9b5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameApps.h">
+      <Filter>GameApps</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateManager.h">
+      <Filter>GameStateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="FPS.h">
+      <Filter>FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Mario.h">
+      <Filter>MyActor</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>FPS</Filter>
+    </ClInclude>
+    <ClInclude Include="Register.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="dsutil.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="dxutil.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>CollisionDefected</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcePath.h">
+      <Filter>ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphic.h">
+      <Filter>Input\Graphic</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="SplashState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadingState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayingState.h">
+      <Filter>GameState\SubState</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>GameState</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>GameApps</Filter>
+    </ClCompile>
+    <ClCompile Include="GameApps.cpp">
+      <Filter>GameApps</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Mario.cpp">
+      <Filter>MyActor</Filter>
+    </ClCompile>
+    <ClCompile Include="FPS.cpp">
+      <Filter>FPS</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateManager.cpp">
+      <Filter>GameStateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>FPS</Filter>
+    </ClCompile>
+    <ClCompile Include="Register.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="dsutil.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>CollisionDefected</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphic.cpp">
+      <Filter>Input\Graphic</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadingState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayingState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+    <ClCompile Include="SplashState.cpp">
+      <Filter>GameState\SubState</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
