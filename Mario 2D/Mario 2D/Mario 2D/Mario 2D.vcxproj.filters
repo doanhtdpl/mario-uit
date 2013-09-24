@@ -48,11 +48,20 @@
     <Filter Include="CollisionDefected">
       <UniqueIdentifier>{52a06a60-ce10-48fa-bc2b-d63f40e99532}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Input\Graphic">
-      <UniqueIdentifier>{d98b0768-a5cf-4f22-b68e-99c1e0339a1c}</UniqueIdentifier>
+    <Filter Include="Text">
+      <UniqueIdentifier>{01ed7e63-b34c-40bb-bb2c-662b39d747ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MyActor">
+    <Filter Include="QuadTree">
+      <UniqueIdentifier>{e64a3b6a-424d-4223-b5ae-96a958909ea4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\OtherObjects">
+      <UniqueIdentifier>{d178552a-12d2-4142-ba6b-5b70d23d578e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\MainActor">
       <UniqueIdentifier>{617b2167-e1a2-4bdd-a5bf-266fc167e9b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphic">
+      <UniqueIdentifier>{d98b0768-a5cf-4f22-b68e-99c1e0339a1c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +81,7 @@
       <Filter>Camera</Filter>
     </ClInclude>
     <ClInclude Include="Mario.h">
-      <Filter>MyActor</Filter>
+      <Filter>Object\MainActor</Filter>
     </ClInclude>
     <ClInclude Include="Device.h">
       <Filter>FPS</Filter>
@@ -95,9 +104,6 @@
     <ClInclude Include="Map.h">
       <Filter>Map</Filter>
     </ClInclude>
-    <ClInclude Include="QuadTree.h">
-      <Filter>CollisionDefected</Filter>
-    </ClInclude>
     <ClInclude Include="ResourcePath.h">
       <Filter>ResourceManager</Filter>
     </ClInclude>
@@ -105,7 +111,7 @@
       <Filter>Input</Filter>
     </ClInclude>
     <ClInclude Include="Graphic.h">
-      <Filter>Input\Graphic</Filter>
+      <Filter>Graphic</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>Texture</Filter>
@@ -137,6 +143,21 @@
     <ClInclude Include="GameState.h">
       <Filter>GameState</Filter>
     </ClInclude>
+    <ClInclude Include="Objects.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <Filter>Object\OtherObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTree.h">
+      <Filter>QuadTree</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainGame.cpp">
@@ -149,7 +170,7 @@
       <Filter>Camera</Filter>
     </ClCompile>
     <ClCompile Include="Mario.cpp">
-      <Filter>MyActor</Filter>
+      <Filter>Object\MainActor</Filter>
     </ClCompile>
     <ClCompile Include="FPS.cpp">
       <Filter>FPS</Filter>
@@ -175,9 +196,6 @@
     <ClCompile Include="Map.cpp">
       <Filter>Map</Filter>
     </ClCompile>
-    <ClCompile Include="QuadTree.cpp">
-      <Filter>CollisionDefected</Filter>
-    </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
       <Filter>ResourceManager</Filter>
     </ClCompile>
@@ -188,7 +206,7 @@
       <Filter>Texture</Filter>
     </ClCompile>
     <ClCompile Include="Graphic.cpp">
-      <Filter>Input\Graphic</Filter>
+      <Filter>Graphic</Filter>
     </ClCompile>
     <ClCompile Include="LoadingState.cpp">
       <Filter>GameState\SubState</Filter>
@@ -217,5 +235,23 @@
     <ClCompile Include="SplashState.cpp">
       <Filter>GameState\SubState</Filter>
     </ClCompile>
+    <ClCompile Include="Objects.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <Filter>Object\OtherObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTree.cpp">
+      <Filter>QuadTree</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
 </Project>
