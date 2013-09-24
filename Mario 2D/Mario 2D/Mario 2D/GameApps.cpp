@@ -16,8 +16,6 @@ CGameApps::~CGameApps()
 // Init
 int CGameApps::Init(HINSTANCE _hInstance)
 {
-	cout<<"\nInit game";
-
 // Set defaul parameters
 	m_isPaused = false;
 	m_isAlived = true;
@@ -79,7 +77,6 @@ void CGameApps::Destroy()
 // Run
 void CGameApps::Run()
 {
-	this->Init(m_register->Get_hInstance());
 	 while (m_isAlived) {
 		m_fps->BeginCounter();
         if (m_isPaused == false) {
