@@ -27,7 +27,7 @@ void CGameStateManager::Init(HINSTANCE _hInstance, HWND _wndHandler, CGraphic* _
 	m_graphic = _graphic;
 	m_input = _input;
 	
-	D3DXCreateSprite(m_graphic->Get_pd3ddevice(), &m_spriteHandler);
+	//D3DXCreateSprite(m_graphic->Get_pd3ddevice(), &m_spriteHandler);
 
 }
 

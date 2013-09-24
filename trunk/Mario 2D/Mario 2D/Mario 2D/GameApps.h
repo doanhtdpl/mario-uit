@@ -31,14 +31,14 @@ public:
 	CGameApps();
 	~CGameApps();
 
-// Main methods
+#pragma region Main methods
 	int Init(HINSTANCE);
 	void Destroy();
 	void Run();
 	void Pause();
 	void Resume();
 	void Exit();
-// End main methods
+#pragma endregion Main methods
 	
 	bool IsAlive();
 	bool IsPause();
