@@ -3,12 +3,12 @@
 
 #include <d3d9.h>
 #include <d3dx9.h>
-#include "GameStateManager.h"
+#include "GameApps.h"
 #include "Input.h"
 #include "Camera.h"
 #include "Sprite.h"
 
-class CGameStateManager;
+class CGameApps;
 
 // State game ID
 enum GameStateID
@@ -27,20 +27,19 @@ enum GameStateID
 class CGameState
 {	
 protected:
-	CGameStateManager* m_game;
-	GameStateID m_id;
-	CSprite* m_background;
-	//CSprite* m_bg;
-	LPD3DXSPRITE m_spriteHandler;
-	CInput* m_input;
-	
+	CGameApps*		m_game;
+	GameStateID		m_id;
+	CSprite*		m_background;
+	LPD3DXSPRITE	m_spriteHandler;
+	CInput*			m_input;
+	// Timer
 	float m_time;
-	bool m_isQuit;
+
 public:
 	CGameState();
 	~CGameState();
 	
-	virtual void Init(CGameStateManager*);
+	virtual void Init(CGameApps*);
 	virtual void Render(LPD3DXSPRITE);
 	virtual void Update(CInput*, float);
 	virtual void Exit();

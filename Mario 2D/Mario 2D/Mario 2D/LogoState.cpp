@@ -1,6 +1,4 @@
 #include "LogoState.h"
-#include <iostream>
-using namespace std;
 
 
 CLogoState::CLogoState() : CGameState()
@@ -11,49 +9,46 @@ CLogoState::~CLogoState()
 {
 }
 
-void CLogoState::Init(CGameStateManager* _game)
+void CLogoState::Init(CGameApps* _game)
 {
-	cout<<"\nLogo State: Init";
 	CGameState::Init(_game);
-	//m_bg = CResourceManager::GetInstance()->GetResouce(BG_ID);
-//	m_time = 0.0f;
-//	m_sound = CResourceManager::GetAudio();
-//	m_sound->PlaySound(CResourceManager::GetInstance()->GetSound(SOUND_LOADING_ID));
+	m_menuState = new CMenuState();
+	m_background = CResourceManager::GetInstance()->GetResouce(MAP_ID);
+	m_time = 0.0f;
+	m_sound = CResourceManager::GetAudio();
+	m_sound->PlaySound(CResourceManager::GetInstance()->GetSound(SOUND_LOADING_ID));
 }
 
 void CLogoState::Render(LPD3DXSPRITE _spriteHandler)
 {
-	cout<<"\nLogo State: Render";
-	//if (!m_isQuit)
-	//{
-	//	//m_bg->Render(_spriteHandler);
-	//}
+	if (m_game->m_isAlived == true)
+	{
+		m_background->Render(_spriteHandler);
+	}
 	CGameState::Render(_spriteHandler);
 }
 
 void CLogoState::Update(CInput* _input, float _gameTime)
 {
-	cout<<"\nLogo State: Update";
 	CGameState::Update(_input , _gameTime);
 
-	//m_bg->SetCurrentFrame(0);
-	//m_bg->SetTimeAnimation(0);
-	//m_bg->Update(0,1);
+	m_background->SetCurrentFrame(0);
+	m_background->SetTimeAnimation(0);
+	m_background->Update(0,1);
 	//
-	//m_time += _gameTime;
-	//if (m_time >= 10.0f)
-	//{
-	//	CGameStateManager::GetInstance()->SwitchState(new CLoadingState());
-	//	m_sound->StopSound(CResourceManager::GetInstance()->GetSound(SOUND_LOADING_ID));
-	//	m_isQuit = true;
-	//}
+	m_time += _gameTime;
+	if (m_time >= 10.0f)
+	{
+		CGameStateManager::GetInstance()->SwitchState(m_menuState);
+		m_sound->StopSound(CResourceManager::GetInstance()->GetSound(SOUND_LOADING_ID));
+		m_game->m_isAlived = true;
+	}
 }
 
 void CLogoState::Exit()
 {
-	//delete m_sound;
-	//delete m_bg;
-	//delete m_background;
+	delete m_sound;
+	delete m_background;
 	CGameState::Exit();
 }
 
