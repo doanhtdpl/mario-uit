@@ -79,7 +79,7 @@ void CGameApps::Destroy()
 // Run
 void CGameApps::Run()
 {
-	 //this->Init();
+	this->Init(m_register->Get_hInstance());
 	 while (m_isAlived) {
 		m_fps->BeginCounter();
         if (m_isPaused == false) {

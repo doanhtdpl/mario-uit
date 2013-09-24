@@ -20,12 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -77,6 +79,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Brick.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Device.h" />
     <ClInclude Include="dsutil.h" />
@@ -94,6 +97,8 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="Mario.h" />
     <ClInclude Include="MenuState.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="Objects.h" />
     <ClInclude Include="OptionState.h" />
     <ClInclude Include="PlayingState.h" />
     <ClInclude Include="QuadTree.h" />
@@ -103,11 +108,13 @@
     <ClInclude Include="Audio.h" />
     <ClInclude Include="SplashState.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AboutState.cpp" />
     <ClCompile Include="Audio.cpp" />
+    <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Device.cpp" />
     <ClCompile Include="dsutil.cpp" />
@@ -124,6 +131,8 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Mario.cpp" />
     <ClCompile Include="MenuState.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="Objects.cpp" />
     <ClCompile Include="OptionState.cpp" />
     <ClCompile Include="PlayingState.cpp" />
     <ClCompile Include="QuadTree.cpp" />
@@ -131,7 +140,11 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="SplashState.cpp" />
     <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
