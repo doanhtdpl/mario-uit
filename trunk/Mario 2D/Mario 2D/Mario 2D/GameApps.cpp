@@ -14,7 +14,7 @@ CGameApps::~CGameApps()
 }
 
 // Init
-int CGameApps::Init(HINSTANCE _hInstance)
+int CGameApps::Game_Init(HINSTANCE _hInstance)
 {
 // Set defaul parameters
 	m_isPaused = false;
@@ -64,20 +64,38 @@ int CGameApps::Init(HINSTANCE _hInstance)
 	}
 
 // Game State Manager
-	CGameStateManager::GetInstance()->Init(m_register->Get_hInstance(), m_register->Get_WndHandle(), m_graphic , m_input);
+	CGameStateManager::GetInstance()->Init(this, m_register->Get_hInstance(), m_register->Get_WndHandle(), m_graphic , m_input, m_spriteHandler);
 
 	return 1;
 }
 
 // Destroy
-void CGameApps::Destroy()
+int CGameApps::Game_Destroy()
 {
-	cout<<"\nDestroy game";
+	if (m_register != NULL)
+	{
+		delete m_register;
+	}
+	if (m_graphic != NULL)
+	{
+		delete m_graphic;
+	}
+	if (m_gamestatemanager != NULL)
+	{
+		delete m_gamestatemanager;
+	}
+	if (m_input!=NULL)
+	{
+		m_input->Kill_Keyboard();
+		delete m_input;
+	}
+	return 1;
 }
 // Run
-void CGameApps::Run()
+void CGameApps::Game_Run()
 {
-	 while (m_isAlived) {
+	while (m_isAlived) 
+	 {
 		m_fps->BeginCounter();
         if (m_isPaused == false) {
 			CGameStateManager::GetInstance()->Update(true);
@@ -88,32 +106,34 @@ void CGameApps::Run()
 		//
         Sleep(TIME_DELAY);
     }
-	Destroy();
+	Game_Destroy();
 }
 
 // Pause
-void CGameApps::Pause()
+void CGameApps::Game_Pause()
 {
 	m_isPaused = true;
 }
 
 // Resume
-void CGameApps::Resume()
+void CGameApps::Game_Resume()
 {
 	m_isPaused = false;
 }
 
 // Exit
-void CGameApps::Exit()
+void CGameApps::Game_Exit()
 {
 	m_isAlived = false;
 }
 
 // Flags: isAlived / isPaused
-bool CGameApps::IsAlive(){
+bool CGameApps::IsAlive()
+{
 	return m_isAlived;
 }
-bool CGameApps::IsPause(){
+bool CGameApps::IsPause()
+{
 	return m_isPaused;
 }
 

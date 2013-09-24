@@ -26,7 +26,8 @@ bool CRegister::InitWindows()
 	wcex.lpszClassName	= NameClass;
 	wcex.hIconSm		= 0;
 	RegisterClassEx(&wcex);
-	m_wndHandle = CreateWindow(NameClass, 
+	m_wndHandle = CreateWindow(
+		NameClass, 
 		NameClass, 
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 

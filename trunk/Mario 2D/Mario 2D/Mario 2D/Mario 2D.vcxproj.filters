@@ -116,28 +116,10 @@
     <ClInclude Include="Texture.h">
       <Filter>Texture</Filter>
     </ClInclude>
-    <ClInclude Include="AboutState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
-    <ClInclude Include="SplashState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
-    <ClInclude Include="ExitState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
-    <ClInclude Include="LoadingState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
     <ClInclude Include="LogoState.h">
       <Filter>GameState\SubState</Filter>
     </ClInclude>
     <ClInclude Include="MenuState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
-    <ClInclude Include="OptionState.h">
-      <Filter>GameState\SubState</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayingState.h">
       <Filter>GameState\SubState</Filter>
     </ClInclude>
     <ClInclude Include="GameState.h">
@@ -157,6 +139,9 @@
     </ClInclude>
     <ClInclude Include="QuadTree.h">
       <Filter>QuadTree</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckCollision.h">
+      <Filter>CollisionDefected</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -208,9 +193,6 @@
     <ClCompile Include="Graphic.cpp">
       <Filter>Graphic</Filter>
     </ClCompile>
-    <ClCompile Include="LoadingState.cpp">
-      <Filter>GameState\SubState</Filter>
-    </ClCompile>
     <ClCompile Include="LogoState.cpp">
       <Filter>GameState\SubState</Filter>
     </ClCompile>
@@ -219,21 +201,6 @@
     </ClCompile>
     <ClCompile Include="GameState.cpp">
       <Filter>GameState</Filter>
-    </ClCompile>
-    <ClCompile Include="AboutState.cpp">
-      <Filter>GameState\SubState</Filter>
-    </ClCompile>
-    <ClCompile Include="ExitState.cpp">
-      <Filter>GameState\SubState</Filter>
-    </ClCompile>
-    <ClCompile Include="OptionState.cpp">
-      <Filter>GameState\SubState</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayingState.cpp">
-      <Filter>GameState\SubState</Filter>
-    </ClCompile>
-    <ClCompile Include="SplashState.cpp">
-      <Filter>GameState\SubState</Filter>
     </ClCompile>
     <ClCompile Include="Objects.cpp">
       <Filter>Object</Filter>
@@ -249,6 +216,9 @@
     </ClCompile>
     <ClCompile Include="QuadTree.cpp">
       <Filter>QuadTree</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckCollision.cpp">
+      <Filter>CollisionDefected</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

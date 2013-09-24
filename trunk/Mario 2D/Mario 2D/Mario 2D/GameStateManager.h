@@ -10,6 +10,7 @@ class CGameApps;
 class CGameStateManager
 {
 public:
+	CGameApps*	m_game;
 	// Init next/current state
 	CGameState* m_pCurrentState;
 	CGameState* m_pNextState;
@@ -19,11 +20,11 @@ public:
 	CGameStateManager();
 
 	// Transmission parameter
-	HINSTANCE m_hInstance;
-	HWND m_wndHandler;
-	CGraphic* m_graphic;
-	CInput* m_input;
-	LPD3DXSPRITE m_spriteHandler;
+	HINSTANCE		m_hInstance;
+	HWND			m_wndHandler;
+	CGraphic*		m_graphic;
+	CInput*			m_input;
+	LPD3DXSPRITE	m_spriteHandler;
 
 	float m_time;
 
@@ -32,7 +33,7 @@ public:
 	static CGameStateManager* GetInstance();
 
 	// Init
-	void Init(HINSTANCE, HWND, CGraphic*, CInput*);
+	void Init(CGameApps*, HINSTANCE, HWND, CGraphic*, CInput*, LPD3DXSPRITE);
 	
 	// Update/Switch state
 	void Update(bool check);

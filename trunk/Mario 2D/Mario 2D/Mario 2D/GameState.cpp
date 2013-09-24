@@ -6,13 +6,12 @@ CGameState::CGameState()
 
 }
 
-void CGameState::Init(CGameStateManager* _game)
+void CGameState::Init(CGameApps* _game)
 {
 	m_game = _game;
-	m_isQuit = false;
+	m_game->m_isAlived = true;
 	m_time = 0.0f;
 	m_background = NULL;
-	//m_bg = NULL;
 }
 
 void CGameState::Render(LPD3DXSPRITE _spriteHandler)

@@ -1,5 +1,5 @@
 #include "GameStateManager.h"
-#include "LoadingState.h"
+#include "MenuState.h"
 #include "LogoState.h"
 
 
@@ -20,14 +20,14 @@ CGameStateManager* CGameStateManager::GetInstance()
 }
 
 // Init game state manager
-void CGameStateManager::Init(HINSTANCE _hInstance, HWND _wndHandler, CGraphic* _graphic, CInput* _input)
+void CGameStateManager::Init(CGameApps* _game, HINSTANCE _hInstance, HWND _wndHandler, CGraphic* _graphic, CInput* _input, LPD3DXSPRITE _spriteHandler)
 {
+	m_game = _game;
 	m_hInstance = _hInstance;
 	m_wndHandler = _wndHandler;
 	m_graphic = _graphic;
 	m_input = _input;
-	
-	//D3DXCreateSprite(m_graphic->Get_pd3ddevice(), &m_spriteHandler);
+	m_spriteHandler = _spriteHandler;
 
 }
 
@@ -44,7 +44,7 @@ void CGameStateManager::Update(bool check)
 		}
 		if (m_pNextState) 
 		{
-			m_pNextState->Init(this);
+			m_pNextState->Init(this->m_game);
 		}
 		m_pCurrentState = m_pNextState;
 	}

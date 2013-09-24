@@ -16,9 +16,6 @@ class CGameStateManager;
 class CGameApps
 {
 protected:
-	bool m_isAlived;
-	bool m_isPaused;
-
 	CFps*				m_fps;
 	CInput*				m_input;
 	CCamera*			m_camera;
@@ -26,18 +23,20 @@ protected:
 	CRegister*			m_register;
 	CGameStateManager*	m_gamestatemanager;
 public:
+	bool m_isAlived;
+	bool m_isPaused;
 	LPD3DXSPRITE m_spriteHandler;
-
 	CGameApps();
 	~CGameApps();
 
 #pragma region Main methods
-	int Init(HINSTANCE);
-	void Destroy();
-	void Run();
-	void Pause();
-	void Resume();
-	void Exit();
+	int Game_Init(HINSTANCE);
+	int Game_Destroy();
+	// ========================
+	void Game_Run();
+	void Game_Pause();
+	void Game_Resume();
+	void Game_Exit();
 #pragma endregion Main methods
 	
 	bool IsAlive();

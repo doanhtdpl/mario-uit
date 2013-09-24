@@ -5,18 +5,19 @@
 #include "Sprite.h"
 #include "ResourceManager.h"
 #include "Audio.h"
-#include "LoadingState.h"
+#include "MenuState.h"
 
 class CGameState;
 class CLogoState : public CGameState
 {
 protected:
-	CAudio* m_sound;
+	CAudio*		m_sound;
+	CMenuState* m_menuState;
 public:
 	CLogoState(void);
 	~CLogoState(void);
 	
-	void Init(CGameStateManager*);
+	void Init(CGameApps*);
 	void Render(LPD3DXSPRITE _spriteHandler);
 	void Update(CInput*, float);
 	void Exit();
