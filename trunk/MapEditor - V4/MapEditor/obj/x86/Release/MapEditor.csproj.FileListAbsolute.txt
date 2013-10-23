@@ -1,0 +1,9 @@
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\bin\Release\MapEditor.exe
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\bin\Release\MapEditor.pdb
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\MapEditor.Map_Editor.resources
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\MapEditor.Properties.Resources.resources
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\MapEditor.exe
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Release\MapEditor.pdb
