@@ -1,0 +1,57 @@
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\bin\Debug\MapEditor.exe
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\bin\Debug\MapEditor.pdb
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\MapEditor.exe
+E:\LUCKY\Hoc tap\XNA\MapEditor\MapEditor\obj\x86\Debug\MapEditor.pdb
+G:\MapEditor\MapEditor\bin\Debug\MapEditor.exe
+G:\MapEditor\MapEditor\bin\Debug\MapEditor.pdb
+G:\MapEditor\MapEditor\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+G:\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+G:\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\MapEditor\MapEditor\obj\x86\Debug\MapEditor.exe
+G:\MapEditor\MapEditor\obj\x86\Debug\MapEditor.pdb
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\bin\Debug\MapEditor.exe
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\bin\Debug\MapEditor.pdb
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\MapEditor.exe
+C:\Users\TP\Documents\Visual Studio 2010\Projects\Boom\Boom\MapEditor\MapEditor\obj\x86\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\bin\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\bin\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.csprojResolveAssemblyReference.cache
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.csproj.GenerateResource.Cache
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.NewMap.resources
+D:\HOC TAP\HK7\Game\MapEditor\MapEditor\obj\x86\Debug\MapEditor.AddMap.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\bin\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\bin\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.csprojResolveAssemblyReference.cache
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.AddMap.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.NewMap.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V3\MapEditor\obj\x86\Debug\MapEditor.csproj.GenerateResource.Cache
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\bin\Debug\MapEditor.exe
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\bin\Debug\MapEditor.pdb
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.csprojResolveAssemblyReference.cache
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.AddMap.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.Map_Editor.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.NewMap.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.Properties.Resources.resources
+D:\HOC TAP\HK7\Game\Mapedittor\MapEditor - V4\MapEditor\obj\x86\Debug\MapEditor.csproj.GenerateResource.Cache
