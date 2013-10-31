@@ -26,7 +26,7 @@ namespace MapEditor
         static public List<string> list_Object = new List<string>();
         
         private string[,] Matrix;
-        private string[,] Temp;
+       
 
         public string[,] _Matrix
         {
@@ -35,7 +35,7 @@ namespace MapEditor
         }
 
         //Khởi tạo giá trị mặc định cho ma trận
-        public void Load()
+        public void Clear()
         {
             Matrix = new string[Width, Height];
             for (int i = 0; i < Width; i++)
@@ -45,7 +45,8 @@ namespace MapEditor
 
         //Mở rộng Map
         public void Add(int cols, int rows)
-        {
+        { 
+            string[,] Temp;
             Temp = Matrix;
             Matrix = new string[Width + cols, Height + rows];
 
@@ -68,27 +69,35 @@ namespace MapEditor
         }
 
         //di chuyen sang trai
-        public void MoveLeft()
+        public bool MoveLeft(int valueMove = 10)
         {
-            for (int i = 0; i < Height; i++)
-            {
-                if (Matrix[0, i] != null)
-                {
-                    MessageBox.Show("Can't Move");
-                    return;
-                }
-            }
+            List<string> list_temp = new List<string>();
+            list_temp.Add(list_Object[0]);
+            list_temp.Add(list_Object[1]);
 
-            for (int i = 1; i < Width; i++)
-                for (int j = 0; j < Height; j++)
+            foreach( string Object in list_Object )
+            {
+                string[] info_Obj = Object.Split(' ');
+
+                if (list_Object.IndexOf(Object) > 1)
                 {
-                    Matrix[Width - 1, j] = null;
-                    if (Matrix[i, j] != null)
+                    if ((Int32.Parse(info_Obj[1]) - valueMove) >= 0)
                     {
-                        Matrix[i - 1, j] = Matrix[i, j];
-                        Matrix[i, j] = null;
+                        info_Obj[1] = (Int32.Parse(info_Obj[1]) - valueMove).ToString();
+                        list_temp.Add(String.Join(" ", info_Obj));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Can't Move");
+                        return false;
                     }
                 }
+                
+            }
+
+            list_Object = list_temp;
+            return true;
+           
         }
 
         //Thay đổi giá trị một phần tử của ma trận

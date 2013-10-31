@@ -21,6 +21,7 @@ namespace MapEditor
         //Kiểm tra sự kiện mousedown
         bool painted = false;
         bool IsMouseDown = false;
+        bool IsShiftDown = false;
         Point LastPaint;
 
         #endregion
@@ -34,7 +35,7 @@ namespace MapEditor
 
         private void Map_Editor_Load(object sender, EventArgs e)
         {
-            
+            txtValueMove.Text = "10";
             //Khởi tạo thông tin map
             MapInfo = new Map_Info();
             NewMap(1500, 700);
@@ -64,18 +65,40 @@ namespace MapEditor
             {
                 if (IsMouseDown && !IsPaint(new Point(e.X, e.Y)))
                 {
-                    if (e.Button == MouseButtons.Left)
+                    
+                    if (IsShiftDown && e.Y>LastPaint.Y && e.Y<LastPaint.Y+Map_Info.Item_Height)
                     {
-                        MapInfo.Change(e.Location, (Map_Info.imgSelect + 1).ToString());
-                        Object.Clear(e.Location);
-                        Object.Draw(e.Location);
+                        if (e.Button == MouseButtons.Left)
+                        {
+                            Point temp = new Point(e.X, LastPaint.Y);
+                            MapInfo.Change(temp, (Map_Info.imgSelect).ToString());
+                            Object.Clear(temp);
+                            Object.Draw(temp);
+                        }
+                        LastPaint = new Point(e.X, LastPaint.Y);
+                    }
+                    else if (IsShiftDown && e.X > LastPaint.X && e.X < LastPaint.X + Map_Info.Item_Width)
+                    {
+                        if (e.Button == MouseButtons.Left)
+                        {
+                            Point temp = new Point(LastPaint.X, e.Y);
+                            MapInfo.Change(temp, (Map_Info.imgSelect).ToString());
+                            Object.Clear(temp);
+                            Object.Draw(temp);
+                        }
+                        LastPaint = new Point(LastPaint.X, e.Y);
                     }
                     else
                     {
-                        MapInfo.Change(e.Location, Map_Info.Default.ToString());
-                        Object.Clear(e.Location);
+                        if (e.Button == MouseButtons.Left)
+                        {
+                            MapInfo.Change(e.Location, (Map_Info.imgSelect).ToString());
+                            Object.Clear(e.Location);
+                            Object.Draw(e.Location);
+                        }
+                        LastPaint = new Point(e.X, e.Y);
                     }
-                    LastPaint = new Point(e.X, e.Y);
+                    
                     painted = true;
                 }
             }
@@ -88,21 +111,26 @@ namespace MapEditor
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    MapInfo.Change(e.Location, (Map_Info.imgSelect + 1).ToString());
+                    MapInfo.Change(e.Location, (Map_Info.imgSelect).ToString());
                     Object.Clear(e.Location);
                     Object.Draw(e.Location);
-
                 }
-                else
-                {
-                    MapInfo.Change(e.Location, Map_Info.Default.ToString());
-                    Object.Clear(e.Location);
-                }
-                
+                LastPaint = new Point(e.X, e.Y);
+               
             }
             painted = false;
 
         }
+
+        private void Map_Editor_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+            {
+                IsShiftDown = true;
+               // MessageBox.Show("Shift Down");
+            }
+        }
+
 
         //Sự kiện cho thanh cuộn
         private void hScrollBarMap_ValueChanged(object sender, EventArgs e)
@@ -138,6 +166,7 @@ namespace MapEditor
             DrawMap();
         }
 
+        
 
         #endregion
 
@@ -146,10 +175,10 @@ namespace MapEditor
         //Kiểm tra ô nằm tọa độ e có được vẽ trong sự kiện mousemove chưa
         private bool IsPaint(Point e)
         {
-            return  ( (e.X < (LastPaint.X + Map_Info.Item_Width)) && (e.X > (LastPaint.X - Map_Info.Item_Width))
-                        && (e.Y < (LastPaint.Y + Map_Info.Item_Height )) && (e.Y > (LastPaint.Y - Map_Info.Item_Height)));
+            return ((e.X < (LastPaint.X + Map_Info.Item_Width)) && (e.X > (LastPaint.X - Map_Info.Item_Width))
+                        && (e.Y < (LastPaint.Y + Map_Info.Item_Height)) && (e.Y > (LastPaint.Y - Map_Info.Item_Height)));
         }
-        
+
         //Vẽ map từ Map_Info
         private void DrawMap()
         {
@@ -161,7 +190,7 @@ namespace MapEditor
                     string[] info_Object = Obj.Split(' ');
                     if (Map_Info.list_Object.IndexOf(Obj) > 1)
                     {
-                        Object = new Map_Object(Img_List.Images[Int32.Parse(info_Object[0])-1], pn_Map);
+                        Object = new Map_Object(Img_List.Images[Int32.Parse(info_Object[0])], pn_Map);
                         Object.Draw(new Point(Int32.Parse(info_Object[1]), Int32.Parse(info_Object[2])));
                     }
                 }
@@ -180,17 +209,21 @@ namespace MapEditor
             Map_Info.Height = rows;
             if (Map_Info.list_Object.Count > 0) Map_Info.list_Object.Clear();
             pn_Map.Invalidate();
+
             pn_Map.Width = Map_Info.Width;
             pn_Map.Height = Map_Info.Height;
 
             Map_Info.list_Object.Add("0");
             Map_Info.list_Object.Add("0");
 
-            MapInfo.Load();
+            MapInfo.Clear();
+
             hScrollBarMap.Value = 0;
             vScrollBarMap.Value = 0;
             pn_Map.Location = new Point(0, 0);
         }
+
+
 
         //Mở rộng Map
         private void AddMap(int cols, int rows)
@@ -205,8 +238,21 @@ namespace MapEditor
         //Di Chuyển Map
         private void MoveLeft()
         {
-            MapInfo.MoveLeft();
-            DrawMap();
+            try
+            {
+                Int32.Parse(txtValueMove.Text);
+                if (MapInfo.MoveLeft(Int32.Parse(txtValueMove.Text)))
+                {
+                    pn_Map.Invalidate();
+
+                    pn_Map.Width = Map_Info.Width;
+                    pn_Map.Height = Map_Info.Height;
+
+                    //MapInfo.Clear();
+                    //DrawMap();
+                }
+            }
+            catch { }
         }
 
         private void SelectPicture(int id_Picture)
@@ -231,12 +277,12 @@ namespace MapEditor
             DrawMap();
         }
 
-         //Sự kiện click nút Opent
+        //Sự kiện click nút Opent
         private void btn_Open_Click(object sender, EventArgs e)
         {
             OpenFileDialog frm = new OpenFileDialog();
             frm.Filter = "*.txt|*.txt";
-          //  DialogResult dlg = //STAShowDialog(frm);
+            //  DialogResult dlg = //STAShowDialog(frm);
             frm.ShowDialog();
             if (frm.CheckPathExists)
             {
@@ -283,9 +329,26 @@ namespace MapEditor
 
         #endregion
 
-       
-       
+        private void btnMoveLeft_Click_1(object sender, EventArgs e)
+        {
+            MoveLeft();
+            DrawMap();
+        }
 
         
+
+        private void Map_Editor_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.ShiftKey)
+            {
+                IsShiftDown = false;
+              //  MessageBox.Show("Shift Up");
+            }
+        }
+
+
+
+
+
     }
 }
